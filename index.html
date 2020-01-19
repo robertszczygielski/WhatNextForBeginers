@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!--		<title>reveal.js</title>-->
+		<title>What Next</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Robert Szczygielski</h1>
+					</section>
+					<section>
+						<h1>What Next</h1>
+						<p class="fragment">jak pomnażać wiedzę w domu?</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>KaiZen</h3>
+						<p class="fragment">Metoda małych kroków</p>
+					</section>
+					<section>
+						<h4>Kai</h4>
+						<p class="fragment" style="color: #17ff2e">Zmiana</p>
+						<h4>Zen</h4>
+						<p class="fragment" style="color:#17ff2e;">Dobrze</p>
+						<p class="fragment" style="color:chartreuse">Koncepcją ciągłego doskonalenia</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Postanowienie noworoczne</h3>
+						<p class="fragment" style="color:#17ff2e;">Bieganie</p>
+					</section>
+					<section>
+						<h4>Bieganie</h4>
+						<p class="fragment" style="color: red">Kupuje buty</p>
+						<p class="fragment" style="color: red">Mam dres</p>
+						<p class="fragment" style="color: red">Idę biegać</p>
+					</section>
+					<section>
+						<h4>Bieganie</h4>
+						<p class="fragment" style="color: green">Idę na spacer o 17:00 - bez celu</p>
+						<p class="fragment" style="color: green">Idę na spacer o 17:00 - po parku</p>
+						<p class="fragment" style="color: green">Spacerując, czasem pobiegam</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p style="font-size: 3em">PetHotel</p>
+					</section>
+					<section>
+						<h4>Początek</h4>
+						<ul>
+							<li class="fragment">Przyjęcie pupila do hotelu</li>
+							<li class="fragment">Jakieś dane (imię + nazwisko) o właścicielu</li>
+							<li class="fragment">Zapis do bazy danych</li>
+						</ul>
+					</section>
+					<section>
+						<h4>1 Mile Stone</h4>
+						<ul>
+							<li class="fragment">Typ pupila</li>
+							<li class="fragment">Pożywienie</li>
+							<li class="fragment">Uwagi do diety pupila</li>
+						</ul>
+					</section>
+					<section>
+						<h4>2 Mile Stone</h4>
+						<ul>
+							<li class="fragment">Pokoje</li>
+							<li class="fragment">Typy pokoi</li>
+							<li class="fragment">Jeden właściciel posiada kilku pupili</li>
+						</ul>
+					</section>
+					<section>
+						<h4>3 Mile Stone</h4>
+						<ul>
+							<li class="fragment">Kwiaty = też pupile</li>
+							<li class="fragment">Rodzaj kwiatów</li>
+							<li class="fragment">Klimat w pokojach</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Kaizen</h4>
+						<ul>
+							<li class="fragment">Prosta list - nawet dla zabawy</li>
+							<li class="fragment">Co można by dodać, małego (przycisk, pole)?</li>
+							<li class="fragment">Jakie problemy to spowodowało, czego brakuje?</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>At Home</h1>
+					</section>
+					<section>
+						<pre><code class="hljs html" data-trim contenteditable style="font-size: 18px;" data-line-numbers>
+							&lt;body&gt;
+								&lt;p id="dogs">&lt;/p&gt;
+								&lt;img id="imageDog"/&gt;
+
+								&lt;script src="AllDogs.js">&lt;/script&gt;
+							&lt;/body&gt;
+						</code></pre>
+					</section>
+					<section>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;" data-line-numbers>
+						fetch('https://dog.ceo/api/breeds/image/random')
+							.then(response => {
+								return response.json()
+							})
+							.then(data => {
+								document.getElementById("dogs").innerHTML = data.message;
+								document.getElementById("imageDog").src = data.message;
+							})
+							.catch(err => {
+								console.log(err);
+							});
+						</code></pre>
+					</section>
+					<section>
+						<img data-src="./img/dog_ceo.png">
+					</section>
+					<section>
+						<p style="font-size: 2em">https://dog.ceo/dog-api/</p>
+						<ul style="font-size: .6em">
+							<li class="fragment">https://dog.ceo/api/breeds/list/all </li>
+							<li class="fragment">https://dog.ceo/api/breed/hound/images</li>
+							<li class="fragment">https://dog.ceo/api/breed/<spon style="color: green">{tu nazwa rasy}</spon>/images
+								/random</li>
+						</ul>
+					</section>
+					<section>
+						<p style="font-size: 2em">API</p>
+						<ul style="font-size: 1em">
+							<li class="fragment">https://dog.ceo/dog-api/</li>
+							<li class="fragment">https://the-one-api.herokuapp.com/</li>
+							<li class="fragment">https://swapi.co/</li>
+							<li class="fragment">https://pokeapi.co/</li>
+						</ul>
+					</section>
+					<section>
+						<img data-src="./img/countries.png">
+					</section>
+					<section>
+						<img data-src="./img/cat_api.png">
+					</section>
+					<section>
+						<img data-src="./img/cat_api_ex.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 2em">Schronisko dla zwierząt</p>
+						<ul style="font-size: 1em">
+							<li class="fragment">Krok 1
+								<ul style="font-size: 1em">
+									<li class="fragment">dodawanie/usuwanie zwierząt</li>
+									<li class="fragment">ograniczona liczba miejsc</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p style="font-size: 2em">Schronisko dla zwierząt</p>
+						<ul style="font-size: 1em">
+							<li class="fragment">Krok 2
+								<ul style="font-size: 1em">
+									<li class="fragment">informacje o zwierzęciu</li>
+									<li class="fragment">podział na miejsca dla dzikich i domowych zwierząt</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p style="font-size: 2em">Schronisko dla zwierząt</p>
+						<ul style="font-size: 1em">
+							<li class="fragment">Krok 3
+								<ul style="font-size: 1em">
+									<li class="fragment">edycja zwierząt</li>
+									<li class="fragment">możliwość "adopcji"</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
